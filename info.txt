@@ -13,3 +13,5 @@ ir a la carpeta que genero el laravel y ejecutar el comando (php artisan serve)
 
 listar las routas ir a la carpeta de laravel: php artisan route:list
 endpoint todo aquel servicio en el que pueda acceder y consumir un objeto
+4 areas:configuracion, administracion, interfaz de usuario, web services
+crear un controlador (php artisan make:controller carpeta/controlador)

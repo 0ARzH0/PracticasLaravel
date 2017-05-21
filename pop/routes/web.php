@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\Cache;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return View::make('welcome');
 });
 Route::get('/about', function () {
     return view('about');
@@ -27,3 +28,9 @@ Route::get('admin/poster/example',array('as' => 'admin.home', function(){
     $url=route('admin.home');
     return "this url is ". $url;
 }));
+Route::get('about-page',function(){
+    return view('other.about');
+})->name('other.about');
+Route::get('/cache', function (){
+    return Cache::get('key');
+});
