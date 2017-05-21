@@ -34,3 +34,15 @@ Route::get('about-page',function(){
 Route::get('/cache', function (){
     return Cache::get('key');
 });
+
+
+Route::group(['prefix' => 'pruebasagrupaciones'], function() {
+    //grupo de enrutamientos
+    
+    Route::get('/', function() {
+        return view('pruebas.index');
+    })->name("pruebas.index");
+    Route::get('/uno', function() {
+        return view('pruebas.uno');
+    })->name("pruebas.uno");
+});
