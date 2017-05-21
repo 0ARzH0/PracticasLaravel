@@ -1,0 +1,10 @@
+Tokenizar.- cada que genere un html genera un id unico que cambia siempre y se guarda en session
+
+Instalacion:
+Descargar Composer.
+comprobar instalacion del composer(coimposer -version)
+instalar laravel(composer global require "laravel/installer")
+ir a la carpeta del proyecto y ejecutar (composer create-project --prefer-dist laravel/laravel)
+
+levantar un servidor virtualizado:
+ir a la carpeta que genero el laravel y ejecutar el comando (php artisan serve)
