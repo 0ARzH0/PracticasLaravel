@@ -47,3 +47,4 @@ Route::group(['prefix' => 'pruebasagrupaciones'], function() {
     })->name("pruebas.uno");
 });
 
+//probando git en vscode
