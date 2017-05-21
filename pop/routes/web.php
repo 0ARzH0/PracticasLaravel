@@ -37,7 +37,7 @@ Route::get('/cache', function (){
 
 
 Route::group(['prefix' => 'pruebasagrupaciones'], function() {
-    //grupo de enrutamientos
+    //grupo de enrutamientos    
     
     Route::get('/', function() {
         return view('pruebas.index');
@@ -48,3 +48,16 @@ Route::group(['prefix' => 'pruebasagrupaciones'], function() {
 });
 
 //probando git en vscode
+
+Route::group(['prefix' => 'Blog'], function() {
+    //grupo de enrutamientos    
+    
+    Route::get('/', function() {
+        return "<h1>Holi desde el index del blog</h1>"; //acepta etiquetas
+    })->name("Blog.index");    
+    
+    Route::get('/Comments', 'Blog\CommentController@index')->name("Blog.comments");
+    
+});
+
+//Route::get('Blog/Comments', 'Blog\CommentController@index');
