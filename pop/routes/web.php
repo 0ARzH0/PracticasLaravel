@@ -46,3 +46,4 @@ Route::group(['prefix' => 'pruebasagrupaciones'], function() {
         return view('pruebas.uno');
     })->name("pruebas.uno");
 });
+
