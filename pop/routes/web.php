@@ -23,3 +23,7 @@ Route::get('/post/5/loquequiera', function () {
 Route::get('/post/{n}/{s}', function ($n,$s) {
     return "Esta es la temporada ".$n." de la serie ".$s;
 });
+Route::get('admin/poster/example',array('as' => 'admin.home', function(){
+    $url=route('admin.home');
+    return "this url is ". $url;
+}));

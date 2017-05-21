@@ -8,3 +8,8 @@ ir a la carpeta del proyecto y ejecutar (composer create-project --prefer-dist l
 
 levantar un servidor virtualizado:
 ir a la carpeta que genero el laravel y ejecutar el comando (php artisan serve)
+
+21052017
+
+listar las routas ir a la carpeta de laravel: php artisan route:list
+endpoint todo aquel servicio en el que pueda acceder y consumir un objeto
