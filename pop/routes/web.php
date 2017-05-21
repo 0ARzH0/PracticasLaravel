@@ -54,9 +54,10 @@ Route::group(['prefix' => 'Blog'], function() {
     
     Route::get('/', function() {
         return "<h1>Holi desde el index del blog</h1>"; //acepta etiquetas
-    })->name("Blog.index");    
+    })->name("Blog.Index");    
     
-    Route::get('/Comments', 'Blog\CommentController@index')->name("Blog.comments");
+    Route::get('/Comments', 'Blog\CommentController@index')->name("Blog.Comments");
+    Route::get('/Post/{id}', 'Blog\PostController@index')->name("Blog.Post");
     
 });
 

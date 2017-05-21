@@ -12,9 +12,10 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($ID)
     {
-        //
+        //pasando datos al controlador
+        echo "Holi desde PostController, estas trabajando con ".$ID;
     }
 
     /**
