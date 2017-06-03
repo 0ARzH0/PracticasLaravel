@@ -26,3 +26,26 @@ identificar master layout(app.blade.php)
 para renderizar contenido se utiliza 
 <code>@yield('key')</code>
 donde key es el clave del contenido a cargar
+en la hoja hija se definen las llaves con sus respectivos contenidos
+<code>
+@section('key')
+<div>
+   <h1>Contenido</h1>
+   <hr>
+   <p>Se define contenido</p>
+</div>
+@endsection()
+</code>
+
+<h1>Laravel Engine</h1>
+<code>create table laravel_cms</code>
+<h3>Content Management Sistem</h3>
+php artisan migrate->para migrar
+php artisan migrate:rollback
+
+si me marca error la migracion debo modificar el archivo AppServiceProviver.php
+importar fachada
+<code>use Illuminate\Support\Facades\Schema;</code>
+y agregar dentro del boot la siguiente linea
+<code>Schema::defaultStringLength(191);</code>
+despues se hace un rollback para regresar a un estado anterior al error y despues reintentar la migracion
