@@ -71,3 +71,7 @@ Route::get('formulario', function() {
 });
 Route::get('formulario/{item}', 'Blog\PostController@ShowPost')->name("Blog.PostShow");
 
+Route::get('/render', function () {
+    //return view('app');
+    return view('Home\contact');
+});

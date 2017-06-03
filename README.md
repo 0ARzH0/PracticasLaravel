@@ -19,3 +19,10 @@ endpoint todo aquel servicio en el que pueda acceder y consumir un objeto
 4 areas:configuracion, administracion, interfaz de usuario, web services
 crear un controlador (php artisan make:controller carpeta/controlador)
 crea un controlador con  los recursos: php artisan make:controller --resource Blog/BlogController
+
+
+Laravel vistas 
+identificar master layout(app.blade.php)
+para renderizar contenido se utiliza 
+<code>@yield('key')</code>
+donde key es el clave del contenido a cargar
