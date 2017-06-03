@@ -11,56 +11,63 @@ use Illuminate\Support\Facades\Cache;
 |
 */
 
-// Route::get('/', function () {
-//     //return view('welcome');
-//     return View::make('welcome');
-// });
-// Route::get('/about', function () {
-//     return view('about');
-// });
-// Route::get('/post/5/loquequiera', function () {
-//     return view('about');
-// });
-// Route::get('/post/{n}/{s}', function ($n,$s) {
-//     return "Esta es la temporada ".$n." de la serie ".$s;
-// });
-// Route::get('admin/poster/example',array('as' => 'admin.home', function(){
-//     $url=route('admin.home');
-//     return "this url is ". $url;
-// }));
-// Route::get('about-page',function(){
-//     return view('other.about');
-// })->name('other.about');
-// Route::get('/cache', function (){
-//     return Cache::get('key');
-// });
+Route::get('/', function () {
+    //return view('welcome');
+    return View::make('welcome');
+});
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/post/5/loquequiera', function () {
+    return view('about');
+});
+Route::get('/post/{n}/{s}', function ($n,$s) {
+    return "Esta es la temporada ".$n." de la serie ".$s;
+});
+Route::get('admin/poster/example',array('as' => 'admin.home', function(){
+    $url=route('admin.home');
+    return "this url is ". $url;
+}));
+Route::get('about-page',function(){
+    return view('other.about');
+})->name('other.about');
+Route::get('/cache', function (){
+    return Cache::get('key');
+});
 
 
-// Route::group(['prefix' => 'pruebasagrupaciones'], function() {
-//     //grupo de enrutamientos    
+Route::group(['prefix' => 'pruebasagrupaciones'], function() {
+    //grupo de enrutamientos    
     
-//     Route::get('/', function() {
-//         return view('pruebas.index');
-//     })->name("pruebas.index");
-//     Route::get('/uno', function() {
-//         return view('pruebas.uno');
-//     })->name("pruebas.uno");
-// });
+    Route::get('/', function() {
+        return view('pruebas.index');
+    })->name("pruebas.index");
+    Route::get('/uno', function() {
+        return view('pruebas.uno');
+    })->name("pruebas.uno");
+});
 
-// //probando git en vscode
+//probando git en vscode
 
-// Route::group(['prefix' => 'Blog'], function() {
-//     //grupo de enrutamientos    
+Route::group(['prefix' => 'Blog'], function() {
+    //grupo de enrutamientos    
     
-//     Route::get('/', function() {
-//         return "<h1>Holi desde el index del blog</h1>"; //acepta etiquetas
-//     })->name("Blog.Index");    
+    Route::get('/', function() {
+        return "<h1>Holi desde el index del blog</h1>"; //acepta etiquetas
+    })->name("Blog.Index");    
     
-//     Route::get('/Comments', 'Blog\CommentController@index')->name("Blog.Comments");
-//     Route::get('/Post/{id}', 'Blog\PostController@index')->name("Blog.Post");
+    Route::get('/Comments', 'Blog\CommentController@index')->name("Blog.Comments");
+    Route::get('/Post/{id}', 'Blog\PostController@index')->name("Blog.Post");
     
-// });
+});
 
-// //Route::get('Blog/Comments', 'Blog\CommentController@index');
+//Route::get('Blog/Comments', 'Blog\CommentController@index');
 
 Route::resource('generaRecursos', 'prueba\controlador');
+
+Route::get('formulario', function() {
+    //formulario
+    return view("form");
+});
+Route::get('formulario/{item}', 'Blog\PostController@ShowPost')->name("Blog.PostShow");
+

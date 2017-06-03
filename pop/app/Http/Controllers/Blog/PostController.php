@@ -17,6 +17,11 @@ class PostController extends Controller
         //pasando datos al controlador
         echo "Holi desde PostController, estas trabajando con ".$ID;
     }
+    public function ShowPost($item)
+    {
+        //pasando datos al controlador
+        echo "Haz enviado un: ".$item;
+    }
 
     /**
      * Show the form for creating a new resource.
