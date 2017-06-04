@@ -49,3 +49,15 @@ importar fachada
 y agregar dentro del boot la siguiente linea
 <code>Schema::defaultStringLength(191);</code>
 despues se hace un rollback para regresar a un estado anterior al error y despues reintentar la migracion
+
+
+<h3>para agregar columnas a una tabla especifica</h3>
+<code>php artisan make:migration add_is_phone_column_to_users_table --table=NombreTabla</code>
+
+<h3>para crear una table</h3>
+<code>php artisan make:migration create_posts_table --create=posts</code>
+<h3>actualizar el json que mapea los componentes</h3>
+<code>composer require doctrine/dbal</code>
+
+<h3>Modificar campo</h3>
+<code>$table->text('url')->change();</code>
