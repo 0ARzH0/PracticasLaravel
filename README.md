@@ -65,3 +65,5 @@ despues se hace un rollback para regresar a un estado anterior al error y despue
 <h3>Modificar campo</h3>
 <code>$table->text('url')->change();</code>
 <h3>Actualizar atributos de una misma columna</h3>
+<code>$table->integer('userID')->unsigned()->change();</code><br>
+<code>$table->foreign('userID')->references('userID')->on('tbl_users');</code>

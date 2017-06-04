@@ -330,6 +330,7 @@ class ComposerStaticInit54b424dc69878583ea252f5c4e20a908
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
+        'ChangeAtrOfColumnsInTblPosts' => __DIR__ . '/../..' . '/database/migrations/2017_06_04_191859_change_atr_of_columns_in_tbl_posts.php',
         'ChangeAtrOfIsAdmin' => __DIR__ . '/../..' . '/database/migrations/2017_06_04_185146_change_atr_of_is_admin.php',
         'ChangeNameIsAdminToAdminInTblUsers' => __DIR__ . '/../..' . '/database/migrations/2017_06_04_185910_change_name_is_admin_to_admin_in_tbl_users.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',

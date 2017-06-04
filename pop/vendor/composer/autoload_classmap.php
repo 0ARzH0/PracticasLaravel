@@ -37,6 +37,7 @@ return array(
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
     'Carbon\\CarbonInterval' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
     'Carbon\\Exceptions\\InvalidDateException' => $vendorDir . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
+    'ChangeAtrOfColumnsInTblPosts' => $baseDir . '/database/migrations/2017_06_04_191859_change_atr_of_columns_in_tbl_posts.php',
     'ChangeAtrOfIsAdmin' => $baseDir . '/database/migrations/2017_06_04_185146_change_atr_of_is_admin.php',
     'ChangeNameIsAdminToAdminInTblUsers' => $baseDir . '/database/migrations/2017_06_04_185910_change_name_is_admin_to_admin_in_tbl_users.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
