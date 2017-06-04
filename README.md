@@ -51,9 +51,12 @@ y agregar dentro del boot la siguiente linea
 despues se hace un rollback para regresar a un estado anterior al error y despues reintentar la migracion
 
 
-<h3>para agregar columnas a una tabla especifica</h3>
+
+<h3>Para crear una  migracipon</h3>
 <code>php artisan make:migration add_is_phone_column_to_users_table --table=NombreTabla</code>
 
+<h3>para agregar columnas a una tabla especifica</h3>
+<code>$table->tinyInteger('is_admin')->default('0');</code>
 <h3>para crear una table</h3>
 <code>php artisan make:migration create_posts_table --create=posts</code>
 <h3>actualizar el json que mapea los componentes</h3>
@@ -61,3 +64,4 @@ despues se hace un rollback para regresar a un estado anterior al error y despue
 
 <h3>Modificar campo</h3>
 <code>$table->text('url')->change();</code>
+<h3>Actualizar atributos de una misma columna</h3>

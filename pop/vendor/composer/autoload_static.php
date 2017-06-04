@@ -299,7 +299,9 @@ class ComposerStaticInit54b424dc69878583ea252f5c4e20a908
     );
 
     public static $classMap = array (
+        'AddIsAdminInTblUsers' => __DIR__ . '/../..' . '/database/migrations/2017_06_04_183839_add_is_admin_in_tbl_users.php',
         'AddIsPhoneColumnToUsersTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_04_154521_add_is_phone_column_to_users_table.php',
+        'AddTrashColumns' => __DIR__ . '/../..' . '/database/migrations/2017_06_04_190441_add_trash_columns.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -328,6 +330,8 @@ class ComposerStaticInit54b424dc69878583ea252f5c4e20a908
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
+        'ChangeAtrOfIsAdmin' => __DIR__ . '/../..' . '/database/migrations/2017_06_04_185146_change_atr_of_is_admin.php',
+        'ChangeNameIsAdminToAdminInTblUsers' => __DIR__ . '/../..' . '/database/migrations/2017_06_04_185910_change_name_is_admin_to_admin_in_tbl_users.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateTblCommentsTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_04_170520_create_tbl_comments_table.php',
         'CreateTblLookupsTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_04_171500_create_tbl_lookups_table.php',

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UpdateIsUrlInTblComments extends Migration
+class AddIsAdminInTblUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class UpdateIsUrlInTblComments extends Migration
      */
     public function up()
     {
-        Schema::table('tbl_comments', function (Blueprint $table) {
-            //modificar campo a tipo text
-            $table->text('url')->change();
+        Schema::table('tbl_users', function (Blueprint $table) {
+            //
+            $table->tinyInteger('is_admin');
         });
     }
 
@@ -26,9 +26,9 @@ class UpdateIsUrlInTblComments extends Migration
      */
     public function down()
     {
-        Schema::table('tbl_comments', function (Blueprint $table) {
-            //regresar a tipo varchar
-            $table->string('url')->change();
+        Schema::table('tbl_users', function (Blueprint $table) {
+            //
+            $table->dropdropColumn('is_admin');
         });
     }
 }
