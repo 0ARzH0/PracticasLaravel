@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTblTagsTable extends Migration
+class CreateDeletedFieldInTags extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateTblTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tags', function (Blueprint $table) {
-            $table->increments('tagID');
-            $table->string('name');
-            $table->string('frequency');
-            $table->timestamps();
+        Schema::table('tags', function (Blueprint $table) {
+            //
+            $table->softDeletes();
         });
     }
 
@@ -28,6 +26,9 @@ class CreateTblTagsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tags');
+        Schema::table('tags', function (Blueprint $table) {
+            //
+            $table->dropColumn('deleted_at');
+        });
     }
 }

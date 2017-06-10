@@ -67,3 +67,18 @@ despues se hace un rollback para regresar a un estado anterior al error y despue
 <h3>Actualizar atributos de una misma columna</h3>
 <code>$table->integer('userID')->unsigned()->change();</code><br>
 <code>$table->foreign('userID')->references('userID')->on('tbl_users');</code>
+
+<h1>Eloquent</h1>
+
+<h3>crear modelos</h3>  
+
+primero podermos probar las consultas directas desde web tirando una funcion a una ruta con la sentencia cruda(verificar en web).<br>
+
+<h3>con modelos</h3>
+
+<code>php artisan make:model Tags -m</code>
+al agregar "-m" genera la migracion,
+una vez con el modelo creado<br>
+se puede ejecutar en la funcion haciendo llamada estatica a las unciones por defecto del la clase model que se extiende automaticamente.
+
+
